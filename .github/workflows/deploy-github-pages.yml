@@ -22,6 +22,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Required so GitHub can create a Pages deployment from the workflow artifact.
+      - uses: actions/configure-pages@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
