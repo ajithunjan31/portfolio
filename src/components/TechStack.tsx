@@ -11,9 +11,10 @@ import {
   RapierRigidBody,
 } from "@react-three/rapier";
 import { techStackImages } from "../data/portfolioContent";
+import { publicUrl } from "../utils/publicUrl";
 
 const textureLoader = new THREE.TextureLoader();
-const textures = techStackImages.map((url) => textureLoader.load(url));
+const textures = techStackImages.map((url) => textureLoader.load(publicUrl(url)));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
@@ -190,7 +191,7 @@ const TechStack = () => {
           ))}
         </Physics>
         <Environment
-          files="/models/char_enviorment.hdr"
+          files={publicUrl("models/char_enviorment.hdr")}
           environmentIntensity={0.5}
           environmentRotation={[0, 4, 2]}
         />

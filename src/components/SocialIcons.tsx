@@ -9,6 +9,7 @@ import { TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 import { contact, resumePath } from "../data/portfolioContent";
+import { publicUrl } from "../utils/publicUrl";
 
 const SocialIcons = () => {
   useEffect(() => {
@@ -107,7 +108,7 @@ const SocialIcons = () => {
       </div>
       <a
         className="resume-button"
-        href={resumePath}
+        href={publicUrl(resumePath)}
         target="_blank"
         rel="noreferrer"
       >
